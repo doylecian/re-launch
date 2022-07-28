@@ -1,9 +1,7 @@
-use std::collections::HashMap;
-
 use sysinfo::{System, SystemExt, ProcessExt, PidExt};
 use windows::Win32::Foundation::{HANDLE, WIN32_ERROR, GetLastError};
 
-static WIN32_ERROR_CODES: phf::Map<u32, &str> = phf::phf_map! {
+pub static WIN32_ERROR_CODES: phf::Map<u32, &str> = phf::phf_map! {
     0_u32 => "ERROR_SUCCESS",
     5_u32 => "ERROR_ACCESS_DENIED",
     6_u32 => "ERROR_INVALID_HANDLE",
