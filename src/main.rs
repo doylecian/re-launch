@@ -8,7 +8,7 @@ fn main() {
     let process_name = &*args[1];
 
     for process in get_process_list() {
-        if process.1 == process_name {
+        if process.name == process_name {
             println!("Found {:?}", process);
             std::process::exit(0);
         }

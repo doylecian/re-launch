@@ -19,11 +19,12 @@ pub fn get_process_list() -> Vec<Process> {
     return processes;
 }
 
+#[derive(Debug)]
 pub struct Process {
-    name: String,
-    pid: u32,
-    handle: Option<HANDLE>,
-    exit_code: Option<u32>,
+    pub name: String,
+    pub pid: u32,
+    pub handle: Option<HANDLE>,
+    pub exit_code: Option<u32>,
 }
 
 impl Process {
