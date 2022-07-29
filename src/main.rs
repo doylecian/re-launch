@@ -3,7 +3,7 @@
 extern crate relaunch;
 use relaunch::process::get_process_list;
 
-fn main() { //
+fn main() { 
     let args: Vec<String> = std::env::args().collect();
     let process_name = &*args[1];
 
